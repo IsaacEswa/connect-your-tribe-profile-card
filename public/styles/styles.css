@@ -1,0 +1,131 @@
+:root {
+  --bruin: #614D43;
+  --beige: #FCF5ED;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Plus Jakarta Sans;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.visitekaartje {
+  height: 595px;
+  width: 842px;
+  perspective: 1000px;
+}
+
+.visitekaartje:hover .visitekaartje-inner {
+  transform: rotateY(180deg);
+}
+
+.visitekaartje-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.voorkant,
+.achterkant {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* ----- VOORKANT ----- */
+.voorkant {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  background-color: var(--beige)
+}
+
+.handtekening {
+  width: 60%;
+}
+
+/* ----- ACHTERKANT ----- */
+.achterkant {
+  background-color: var(--bruin);
+  display: flex;
+  color: var(--beige);
+  transform: rotateY(180deg);
+  align-items: center;
+}
+
+.linkerkant,
+.rechterkant {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ----- LINKERKANT ----- */
+.linkerkant h1 {
+  margin-bottom: 5px;
+}
+
+.linkerkant h2 {
+  font-weight: 100;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  font-size: 1.2em;
+}
+
+.linkerkant .socials svg {
+  margin: 0 10px;
+  fill: var(--beige);
+  width: 10%;
+}
+
+.linkerkant .socials svg:hover {
+  opacity: 75%;
+  transition: 0.2s;
+}
+
+.socials {
+  text-align: center;
+}
+
+.foto {
+  border-radius: 35px;
+  width: 45%;
+}
+
+/* ----- RECHTERKANT ----- */
+.rechterkant {
+  padding: 40px;
+}
+
+.rechterkant>p {
+  margin-bottom: 60px;
+}
+
+.feiten h3 {
+  margin-bottom: 3px;
+}
+
+.feiten p {
+  margin-top: 0px;
+}
+
+.feiten a {
+  text-decoration: underline;
+  color: var(--beige);
+}
+
+.feiten a:hover {
+  opacity: 75%;
+  transition: 0.2s;
+}
