@@ -7,7 +7,7 @@ import { Liquid } from 'liquidjs';
 
 
 // Vul hier jouw eigen ID in (zie de instructies in de leertaak)
-const personID = 234
+const personID = 242
 
 // Doe een fetch naar een URL op de WHOIS API, ga pas verder als de fetch gelukt is
 const personResponse = await fetch('https://fdnd.directus.app/items/person/' + personID)
@@ -29,28 +29,28 @@ app.use(express.static('public'))
 
 // Stel Liquid in als 'view engine'
 const engine = new Liquid();
-app.engine('liquid', engine.express()); 
+app.engine('liquid', engine.express());
 
 // Stel de map met Liquid templates in
 // Let op: de browser kan deze bestanden niet rechtstreeks laden (zoals voorheen met HTML bestanden)
 app.set('views', './views')
 
 // Zorg dat werken met request data makkelijker wordt
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({ extended: true }))
 
 // Om Views weer te geven, heb je Routes nodig
 // Maak een GET route voor de index (meestal doe je dit in de root, als /)
 // In je visitekaartje was dit waarschijnlijk index.html
 app.get('/', async function (request, response) {
-   // Render index.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
-   response.render('index.liquid', {person: personResponseJSON.data})
+  // Render index.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
+  response.render('index.liquid', { person: personResponseJSON.data })
 })
 
 // Had je meer pagina's in je oude visitekaartje? Zoals een contact.html?
 // Maak daar dan meer Routes voor aan, en koppel ze aan Views
 // app.get('/contact', function (request, response) {
-   // Render bijvoorbeeld contact.liquid uit de views map, zonder daar iets aan mee te geven
-   // response.render('contact.liquid')
+// Render bijvoorbeeld contact.liquid uit de views map, zonder daar iets aan mee te geven
+// response.render('contact.liquid')
 // })
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
