@@ -23,9 +23,10 @@
 h1 {
   font-family: "Covered By Your Grace";
   color: var(--secondary-color);
-  font-size: 11rem;
+  font-size: 15rem;
   font-weight: normal;
   rotate: -4deg;
+  line-height: 0.8;
 }
 
 main {
@@ -68,6 +69,11 @@ main {
   height: 100%;
   display: flex;
   background-color: var(--primary-color)
+}
+
+.name .last {
+  margin-left: .75em;
+  font-family: "Covered By Your Grace";
 }
 
 /* ----- back ----- */

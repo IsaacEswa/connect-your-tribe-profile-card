@@ -1,22 +1,25 @@
 {% render 'partials/head.liquid' %}
 
-  <main>
-    <section class="profile-card">
-      <div class="profile-card-inner">
-        <section class="front">
-          <h1>Isaac Eswa</h1>
+<main>
+  <section class="profile-card">
+    <div class="profile-card-inner">
+      <section class="front">
+        <h1 class="name">
+          Isaac<br>
+          <span class="last">Eswa</span>
+        </h1>
+      </section>
+      <section class="back">
+        <section class="content-left">
+          <img class="profile-picture" src="assets/foto.jpg" alt="Foto van {{ person.name }}">
         </section>
-        <section class="back">
-          <section class="content-left">
-            <img class="profile-picture" src="assets/foto.jpg" alt="Foto van {{ person.name }}">
-          </section>
-          <section class="content-right">
-          </section>
+        <section class="content-right">
         </section>
-      </div>
-    </section>
-  </main>
+      </section>
+    </div>
+  </section>
+</main>
 
-  <script src="scripts/script.js"></script>
+<script src="scripts/script.js"></script>
 
 {% render 'partials/foot.liquid' %}
