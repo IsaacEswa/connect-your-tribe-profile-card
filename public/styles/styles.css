@@ -163,6 +163,7 @@ main {
   margin-bottom: .75em;
 }
 
-.facts p {
+.facts p,
+.socials p {
   margin-top: .75em;
 }
