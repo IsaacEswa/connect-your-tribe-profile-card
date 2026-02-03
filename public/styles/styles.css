@@ -20,6 +20,14 @@
   font-family: Helvetica;
 }
 
+h1 {
+  font-family: "Covered By Your Grace";
+  color: var(--secondary-color);
+  font-size: 11rem;
+  font-weight: normal;
+  rotate: -4deg;
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -59,16 +67,16 @@ main {
   align-items: center;
   height: 100%;
   display: flex;
-  background-color: var(--secondary-color)
+  background-color: var(--primary-color)
 }
 
 /* ----- back ----- */
 .back {
-  background-color: var(--primary-color);
-  display: flex;
-  color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  /* display: flex; */
+  /* color: var(--secondary-color); */
   transform: rotateY(180deg);
-  align-items: center;
+  /* align-items: center; */
 }
 
 .content-left,
