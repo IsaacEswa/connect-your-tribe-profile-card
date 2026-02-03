@@ -146,6 +146,10 @@ main {
   /* gap: 1em; */
 }
 
+.content-right article::after {
+  /* Hier komt de gestippelde lijn */
+}
+
 .col-left,
 .col-right {
   width: 50%;
@@ -157,4 +161,8 @@ main {
   align-items: center;
   gap: 1.5em;
   margin-bottom: .75em;
+}
+
+.facts p {
+  margin-top: .75em;
 }
