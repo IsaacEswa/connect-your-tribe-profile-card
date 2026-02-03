@@ -1,11 +1,23 @@
+@font-face {
+  font-family: "Akzidenz Grotesk";
+  src: url('../fonts/AkzidenzGrotesk-Super.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "Covered By Your Grace";
+  src: url('../fonts/CoveredByYourGrace-Regular.ttf') format('truetype');
+}
+
 :root {
-  --bruin: #614D43;
-  --beige: #FCF5ED;
+  --primary-color: #614D43;
+  --secondary-color: #FCF5ED;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: Plus Jakarta Sans;
+  font-family: Helvetica;
 }
 
 main {
@@ -47,57 +59,23 @@ main {
   align-items: center;
   height: 100%;
   display: flex;
-  background-color: var(--beige)
+  background-color: var(--secondary-color)
 }
-
-/* 
-.handtekening {
-  width: 60%;
-} */
 
 /* ----- back ----- */
 .back {
-  background-color: var(--bruin);
+  background-color: var(--primary-color);
   display: flex;
-  color: var(--beige);
+  color: var(--secondary-color);
   transform: rotateY(180deg);
   align-items: center;
 }
 
 .content-left,
-.content-right {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+.content-right {}
 
 /* ----- content-left ----- */
-.content-left h1 {
-  margin-bottom: 5px;
-}
-
-.content-left h2 {
-  font-weight: 100;
-  margin-top: 0px;
-  margin-bottom: 50px;
-  font-size: 1.2em;
-}
-
-.content-left .socials svg {
-  margin: 0 10px;
-  fill: var(--beige);
-  width: 10%;
-}
-
-.content-left .socials svg:hover {
-  opacity: 75%;
-  transition: 0.2s;
-}
-
-.socials {
-  text-align: center;
-}
+.content-left {}
 
 .profile-picture {
   border-radius: 35px;
@@ -105,28 +83,4 @@ main {
 }
 
 /* ----- content-right ----- */
-.content-right {
-  padding: 40px;
-}
-
-.content-right>p {
-  margin-bottom: 60px;
-}
-
-.facts h3 {
-  margin-bottom: 3px;
-}
-
-.facts p {
-  margin-top: 0px;
-}
-
-.facts a {
-  text-decoration: underline;
-  color: var(--beige);
-}
-
-.facts a:hover {
-  opacity: 75%;
-  transition: 0.2s;
-}
+.content-right {}
