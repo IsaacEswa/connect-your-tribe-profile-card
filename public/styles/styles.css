@@ -37,6 +37,7 @@ h2 {
   font-weight: normal;
   font-size: 3em;
   text-align: center;
+  margin-bottom: .25em;
 }
 
 h3,
@@ -107,7 +108,7 @@ main {
   padding: 1.5em;
   display: flex;
   flex-direction: row;
-  gap: 1em;
+  gap: 2em;
 }
 
 .signature {
@@ -137,4 +138,23 @@ main {
 .content-right {
   width: 70%;
 
+}
+
+.content-right article {
+  display: flex;
+  flex-direction: row;
+  /* gap: 1em; */
+}
+
+.col-left,
+.col-right {
+  width: 50%;
+}
+
+.personal-information .personal-information-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5em;
+  margin-bottom: .75em;
 }
