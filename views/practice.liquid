@@ -1,3 +1,15 @@
 "wat" ~ Sven <br>
-"Patat" ~ Tin<br>
+"Patat" ~ Tin <br>
 "Bro ik moet de hele workshop doorlezen" ~ Emre
+
+<h1>Data-Driven Web</h1>
+<p>Ik ben dus {{ person.name }}</p>
+
+<p>Het is vandaag {{ 'now' | date: person.birthdate | date: "%d-%B-%y" }} </p>
+
+<img src="{{ person.avatar }}">
+
+<details>
+    <summary>Data</summary>
+    <pre>{{ person | json:4 }}</pre>
+</details>

@@ -11,7 +11,7 @@
       </section>
       <section class="back">
         <section class="content-left">
-          <img class="profile-picture" src="assets/profile-picture.jpg" alt="Foto van {{ person.name }}">
+          <img class="profile-picture" src="{{ person.avatar }}" alt="Foto van {{ person.name }}">
           <h3>[signature]</h3>
           <span class="signature">
             Isaac<br>
@@ -30,19 +30,19 @@
 
               <div class="personal-information-content">
                 <h3>[function]</h3>
-                <p>Frontend Developer</p>
+                <p>{{ person.custom.function }}</p>
               </div>
             </div>
 
             <div class="col-right">
               <div class="personal-information-content">
                 <h3>[age]</h3>
-                <p>20</p>
+                <p>{{ person.custom.age }}</p>
               </div>
 
               <div class="personal-information-content">
                 <h3>[motivation]</h3>
-                <p>John 3:16</p>
+                <p>{{ person.custom.motivation }}</p>
               </div>
 
             </div>
@@ -51,27 +51,28 @@
           <article class="facts">
             <div class="col-left">
               <h3>[skill-set]</h3>
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>JS</p>
+              <p>{{ person.custom.skill_set_01 }}</p>
+              <p>{{ person.custom.skill_set_02 }}</p>
+              <p>{{ person.custom.skill_set_03 }}</p>
+
             </div>
 
             <div class="col-right">
               <h3>[interests]</h3>
-              <p>Music</p>
-              <p>Design & Development</p>
-              <p>Photo- & Videography</p>
+              <p>{{ person.custom.interests_01 }}</p>
+              <p>{{ person.custom.interests_02 }}</p>
+              <p>{{ person.custom.interests_03 }}</p>
             </div>
           </article>
           <article class="socials">
             <div class="col-left">
               <div class="socials-content">
                 <h3>[github]</h3>
-                <p>IsaacEswa</p>
+                <p>{{ person.github_handle }}</p>
               </div>
               <div class="socials-content">
                 <h3>[email]</h3>
-                <p>isaaceswa@gmail.com</p>
+                <p>{{ person.custom.email }}</p>
               </div>
 
             </div>
@@ -79,11 +80,11 @@
             <div class="col-right">
               <div class="socials-content">
                 <h3>[instagram]</h3>
-                <p>@isaac.eswa</p>
+                <p>{{ person.custom.instagram }}</p>
               </div>
               <div class="socials-content">
                 <h3>[phone]</h3>
-                <p>+ 31 6 12 34 56 78</p>
+                <p>{{ person.custom.phone }}</p>
               </div>
             </div>
           </article>
@@ -92,6 +93,12 @@
     </div>
   </section>
 </main>
+
+<details>
+  <summary>Data</summary>
+  <pre>{{ person | json:4 }}</pre>
+</details>
+
 
 <script src="scripts/script.js"></script>
 
