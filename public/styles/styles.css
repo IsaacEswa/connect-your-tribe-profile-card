@@ -77,11 +77,11 @@ main {
   perspective: 1000px;
 }
 
-/*.profile-card:hover .profile-card-inner {
+.profile-card:hover .profile-card-inner {
   transform: rotateY(180deg);
 }
 
------ TIJDELIJK ----- */
+/*----- TIJDELIJK ----- */
 
 .profile-card-inner {
   position: relative;
@@ -116,8 +116,8 @@ main {
 /* ----- back ----- */
 .back {
   background-color: var(--secondary-color);
-  /*transform: rotateY(180deg);
-   ----- TIJDELIJK ----- */
+  transform: rotateY(180deg);
+  /*----- TIJDELIJK ----- */
   padding: 1.5em;
   display: flex;
   flex-direction: row;
