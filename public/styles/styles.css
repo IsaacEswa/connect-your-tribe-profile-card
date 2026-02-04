@@ -11,6 +11,8 @@
 :root {
   --primary-color: #614D43;
   --secondary-color: #FCF5ED;
+
+  --gap-spacing: .75em;
 }
 
 * {
@@ -50,8 +52,16 @@ h3 {
   font-weight: bold;
 }
 
-p {
+
+a {
   font-weight: lighter;
+  text-decoration: underline;
+  color: currentColor;
+}
+
+a:hover {
+  color: grey;
+  transition: .3s;
 }
 
 main {
@@ -67,9 +77,11 @@ main {
   perspective: 1000px;
 }
 
-/* .profile-card:hover .profile-card-inner {
+/*.profile-card:hover .profile-card-inner {
   transform: rotateY(180deg);
-} ----- TIJDELIJK ----- */
+}
+
+----- TIJDELIJK ----- */
 
 .profile-card-inner {
   position: relative;
@@ -97,14 +109,15 @@ main {
 }
 
 .last-name {
-  margin-left: .75em;
+  margin-left: var(--gap-spacing);
   font-family: "Covered By Your Grace";
 }
 
 /* ----- back ----- */
 .back {
   background-color: var(--secondary-color);
-  /* transform: rotateY(180deg); ----- TIJDELIJK ----- */
+  /*transform: rotateY(180deg);
+   ----- TIJDELIJK ----- */
   padding: 1.5em;
   display: flex;
   flex-direction: row;
@@ -117,14 +130,16 @@ main {
   color: var(--primary-color);
   /* margin-top: 2em; */
   line-height: 0.8;
+  padding-top: 5em;
 }
-
-.content-left,
-.content-right {}
 
 /* ----- content-left ----- */
 .content-left {
   width: 30%;
+
+  h3 {
+    margin-bottom: var(--gap-spacing);
+  }
 }
 
 .profile-picture {
@@ -132,6 +147,7 @@ main {
   /* height: 100%; */
   aspect-ratio: 1 / 1.5;
   object-fit: cover;
+  /* margin-bottom: var(--gap-spacing); */
 }
 
 /* ----- content-right ----- */
@@ -146,16 +162,22 @@ main {
   display: flex;
   flex-direction: row;
   /* gap: 1em; */
+  position: relative;
 }
 
-.content-right article::after {
-  /* Hier komt de gestippelde lijn */
+.content-right article:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: -1.5em;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px dashed black;
 }
 
 .col-left,
 .col-right {
   width: 50%;
-  gap: .75em;
+  gap: var(--gap-spacing);
   display: flex;
   flex-direction: column;
 }
@@ -165,17 +187,17 @@ main {
   flex-direction: row;
   align-items: center;
   gap: 1.5em;
-  /* margin-bottom: .75em; */
+  /* margin-bottom: var(--gap-spacing); */
 }
 
 /* .facts p {
-  margin-top: .75em;
+  margin-top: var(--gap-spacing);
 } */
 
 .socials .socials-content {
   display: flex;
   flex-direction: column;
-  gap: .75em;
+  gap: var(--gap-spacing);
   /* margin-bottom: .75em; */
 
 }
